@@ -1,14 +1,21 @@
 import React from "react";
-import Header from "./components/Header";
-import Settings from "./components/Settings";
-import Footer from "./components/Footer";
+import Homepage from "./components/Homepage";
+import Game from "./components/Game";
+
+import {
+  BrowserRouter as Router,
+  Route,
+} from "react-router-dom";
 
 const App = () => (
-     <React.Fragment>
-          <Header />
-          <Settings />
-          <Footer />
-     </React.Fragment>
+     <Router>
+          <React.Fragment>
+               <Route exact path="/" component={ Homepage }/>
+               <Route exact path="/game" component={ Game }/>
+          </React.Fragment>
+     </Router>
 );
 
 export default App;
+
+// WOULDN'T USE ROUTER FOR THIS ONCE WE HAVE STATE AND API, ONLY TEMPORARY TO SEPERATE LOGIN AND GAME PAGE FOR FONTEND DESIGN
