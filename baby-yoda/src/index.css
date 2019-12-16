@@ -1,5 +1,4 @@
 body {
-     margin: 0 auto;
      background-image: url("http://getwallpapers.com/wallpaper/full/a/4/7/16424.jpg");
      text-align: center;
      color: rgb(245, 245, 245);
@@ -40,3 +39,24 @@ footer p {
      font-size: 15px;
      font-style: italic;
 }
+
+.content {
+     margin: 100px;
+}
+
+.gamebox {
+     height: 200px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.game-controls {
+     max-width: 500px;
+     margin: 10px auto;
+     padding: 10px;
+     background: black;
+     border-radius: 30px;
+     border: 1px solid white;
+}
+
