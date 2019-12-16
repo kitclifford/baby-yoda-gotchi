@@ -1,14 +1,42 @@
 body {
-  text-align: center;
-  margin: 50px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+     margin: 0 auto;
+     background-image: url("http://getwallpapers.com/wallpaper/full/a/4/7/16424.jpg");
+     text-align: center;
+     color: rgb(245, 245, 245);
+     font-family: 'StarJedi', Arial, Helvetica, sans-serif;
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+     monospace;
+}
+
+@font-face {
+     font-family: 'StarJedi';
+     src: url("/assets/fonts/Starjedi.ttf");
+}
+
+p {
+     font-size: 20px;
+}
+
+.container {
+     background: linear-gradient(#19181d, #000000);
+     border-radius: 50px;
+     max-width: 800px;
+}
+
+footer {
+     font-family: Helvetica, sans-serif;
+     background: linear-gradient(#000000, #19181d);
+     padding: 25px;
+     margin-top: 150px;
+}
+
+footer p {
+     color: rgb(126, 126, 126);
+     font-size: 15px;
+     font-style: italic;
 }
