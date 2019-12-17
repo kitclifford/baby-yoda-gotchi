@@ -62,7 +62,7 @@ class Settings extends Component {
                     <Form.Group className="row justify-content-center mb-5">
                          <Form.Label className="col-12"><p>Colour:</p></Form.Label>
                          <CirclePicker 
-                              className="col-8 justify-content-center"
+                              className="col-8 justify-content-center picker"
                               color={ this.state.color }
                               onChangeComplete={ this.handleChangeColor }
                               />

@@ -41,9 +41,10 @@ footer p {
 
 .gamebox {
      height: 200px;
-     display: flex;
      justify-content: center;
      align-items: center;
+     display: block;
+     margin-top: 75px;
 }
 
 .game-controls {
@@ -55,3 +56,6 @@ footer p {
      border: 1px solid white;
 }
 
+.picker {
+     max-width: 300px;
+}

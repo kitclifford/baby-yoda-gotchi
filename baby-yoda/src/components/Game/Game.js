@@ -16,6 +16,7 @@ const Game = ({ name, color, age, health }) => (
                               borderTopColor: color,
                          }}
                     ></div>
+                    <div className="robe"></div>
                </div>
                <div className="game-controls">
                     <h2>Age: { age }</h2>

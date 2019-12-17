@@ -1,4 +1,5 @@
 .baby-yoda {
+  margin: auto;
   width: 6em;
   height: 4em;
   border-radius: 3em 3em 4.5em 4.5em;
@@ -49,4 +50,11 @@
   border-bottom-right-radius: 9em 4em;
 }
 
-/*# sourceMappingURL=yoda.css.map */
+.robe {
+  height: 100px;
+  width: 100px;
+  background-image: linear-gradient(rgb(214, 131, 82), rgb(49, 31, 19));
+  border-radius: 50%;
+  margin: auto;
+  margin-top: -20px;
+}
