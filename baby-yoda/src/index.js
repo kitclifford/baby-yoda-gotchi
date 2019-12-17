@@ -10,12 +10,12 @@ import persistState from "redux-localstorage";
 const initial = {
      name: '',
      color: '',
-     age: 0,
-     health: 0,
+     age: 10,
+     health: 100,
      submitted: false
 }
 
-const saveYoda = ( state, action ) => ({
+const saveYoda = (state, action) => ({
      ...state,
      name: action.settings.name,
      color: action.settings.color,

@@ -52,7 +52,7 @@ class Settings extends Component {
                          <Form.Label className="col-12"><p>Name:</p></Form.Label>
                          <Form.Control
                               type="text"
-                              className="col-8"
+                              className="col-8 bg-dark text-warning"
                               value={ this.state.name } 
                               onChange={ this.handleChangeName } 
                          >

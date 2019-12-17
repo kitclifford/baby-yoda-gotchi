@@ -5,6 +5,8 @@ const mapStateToProps = state => {
     return {
         name: state.name,
         color: state.color,
+        age: state.age,
+        health: state.health,
     };
 };
 
