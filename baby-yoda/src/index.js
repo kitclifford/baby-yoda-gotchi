@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 
-import { createStore, compose } from "redux";
+import { createStore, compose, applyMiddleware } from "redux";
+import thunk from "redux-thunk";
 import { Provider } from "react-redux";
-import persistState from "redux-localstorage";
+// import persistState from "redux-localstorage";
 
 const initial = {
      name: '',
@@ -18,8 +19,8 @@ const initial = {
 const saveYoda = (state, action) => ({
      ...state,
      name: action.settings.name,
-     color: action.settings.color,
-     submitted: action.settings.submitted,
+     color: action.settings.colour,
+     submitted: true
 })
 
 const reducer = (state, action) => {
@@ -36,7 +37,7 @@ const composeEnhancers =
 const store = createStore(
      reducer, 
      initial,
-     composeEnhancers(persistState())
+     composeEnhancers(applyMiddleware(thunk))
 );
 
 ReactDOM.render(

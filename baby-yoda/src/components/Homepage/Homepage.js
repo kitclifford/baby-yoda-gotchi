@@ -3,11 +3,13 @@ import Header from "../Header/Header";
 import Settings from "../Settings/index";
 import Footer from "../Footer/Footer";
 
-const Homepage = () => (
+const Homepage = ( submitted ) => (
      <React.Fragment>
-          <Header />
-          <Settings />
-          <Footer />
+          {/* <div style={{ display: submitted ? "block" : "none" }}> */}
+               <Header />
+               <Settings />
+               <Footer />
+          {/* </div> */}
      </React.Fragment>
 );
 

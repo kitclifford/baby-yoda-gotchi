@@ -3,6 +3,7 @@ import { Form } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 import { CirclePicker } from 'react-color';
 
+
 class Settings extends Component {
 
      constructor(props) {
@@ -11,7 +12,6 @@ class Settings extends Component {
           this.state = { 
                name: props.name,
                color: props.color,
-               submitted: false,
           };
 
           this.handleChangeName = this.handleChangeName.bind(this);
@@ -30,16 +30,13 @@ class Settings extends Component {
      handleSubmit(e){
           e.preventDefault();
 
-          this.setState({
-               submitted: true
-          })
-
           this.props.createYoda(this.state);
           
           this.setState({
                name: "",
                colour: "",
           });
+
      }
 
      render() {
@@ -67,12 +64,14 @@ class Settings extends Component {
                               onChangeComplete={ this.handleChangeColor }
                               />
                     </Form.Group>
-                    
+               
                     <Button 
                          type="submit"
                          className="m-1" 
                          variant="outline-warning"
                     >NEW GAME</Button>
+          
+                 
 
                     <Button 
                          className="m-1" 

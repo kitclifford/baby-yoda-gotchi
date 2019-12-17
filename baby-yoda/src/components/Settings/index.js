@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Settings from './Settings';
-import { createYoda } from '../../Actions/state';
+import { postYoda } from '../../Actions/api';
 
 const mapStateToProps = state => {
     return {
@@ -11,7 +11,7 @@ const mapStateToProps = state => {
 
 const mapDispatchtoProps = dispatch => {
     return{
-        createYoda: settings => dispatch(createYoda(settings))
+        createYoda: settings => dispatch(postYoda(settings))
     }
 };
 
