@@ -3,6 +3,7 @@ import { ProgressBar } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 import '../yoda.css';
 
+// EXTEND CLASS AND ADD STATE AND PROPS
 const Game = () => (
      <React.Fragment>
           <div className="content">

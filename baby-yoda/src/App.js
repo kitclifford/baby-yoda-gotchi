@@ -3,8 +3,8 @@ import Homepage from "./components/Homepage";
 import Game from "./components/Game";
 
 import {
-  BrowserRouter as Router,
-  Route,
+     BrowserRouter as Router,
+     Route,
 } from "react-router-dom";
 
 const App = () => (

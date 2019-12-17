@@ -42,7 +42,7 @@
     margin: 0 -1em;
     z-index: -1;
     border-radius: 2em 1em;
-    animation: ears 2s cubic-bezier(.8,.02,.2,.96) infinite alternate;
+    animation: ears 6s cubic-bezier(.8,.02,.2,.96) infinite alternate;
     @keyframes ears {
       to { transform: rotate(var(--rotate)); }
     }
