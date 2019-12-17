@@ -9,6 +9,7 @@
   background-size: 2.75em 2em;
   background-repeat: repeat-x;
   animation: eyes 2s cubic-bezier(0.8, 0.02, 0.2, 0.96) infinite alternate;
+  border-top-color: lightgreen;
 }
 @keyframes eyes {
   to {
@@ -21,7 +22,8 @@
   width: 5em;
   height: 1.5em;
   background: lightpink;
-  border-top: solid 0.5em lightgreen;
+  border-top: solid 0.5em;
+  border-top-color: inherit;
   position: absolute;
   top: 0.5em;
   margin: 0 -1em;

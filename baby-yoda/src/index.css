@@ -2,7 +2,7 @@ body {
      background-image: url("http://getwallpapers.com/wallpaper/full/a/4/7/16424.jpg");
      text-align: center;
      color: rgb(245, 245, 245);
-     font-family: 'StarJedi', Arial, Helvetica, sans-serif;
+     font-family: 'Russo One', sans-serif;
      -webkit-font-smoothing: antialiased;
      -moz-osx-font-smoothing: grayscale;
 }
@@ -10,11 +10,6 @@ body {
 code {
      font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
      monospace;
-}
-
-@font-face {
-     font-family: 'StarJedi';
-     src: url("/assets/fonts/Starjedi.ttf");
 }
 
 p {

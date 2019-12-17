@@ -30,13 +30,16 @@ class Settings extends Component {
      handleSubmit(e){
           e.preventDefault();
 
+          this.setState({
+               submitted: true
+          })
+
           this.props.createYoda(this.state);
+          
           this.setState({
                name: "",
                colour: "",
-               submitted: true
           });
-
      }
 
      render() {
@@ -69,12 +72,12 @@ class Settings extends Component {
                          type="submit"
                          className="m-1" 
                          variant="outline-warning"
-                    >New game</Button>
+                    >NEW GAME</Button>
 
                     <Button 
                          className="m-1" 
                          variant="outline-warning"
-                    >view yoda history</Button>
+                    >VIEW YODA HISTORY</Button>
                </Form>
           );
      } 
