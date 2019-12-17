@@ -12,10 +12,20 @@ const initial = {
      color: '',
      age: 0,
      health: 0,
+     submitted: false
 }
+
+const saveYoda = ( state, action ) => ({
+     ...state,
+     name: action.settings.name,
+     color: action.settings.color,
+     submitted: action.settings.submitted,
+})
 
 const reducer = (state, action) => {
      switch (action.type){
+
+          case "createYoda": return saveYoda(state, action);
           default: return state;
      }
 }

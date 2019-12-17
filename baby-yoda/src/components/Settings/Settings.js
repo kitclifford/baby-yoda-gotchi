@@ -15,7 +15,8 @@ class Settings extends Component {
           };
 
           this.handleChangeName = this.handleChangeName.bind(this);
-          this.handleChangeColor = this.handleChangeColor.bind(this);    
+          this.handleChangeColor = this.handleChangeColor.bind(this);
+          this.handleSubmit = this.handleSubmit.bind(this);    
      }
 
      handleChangeName(e) {
@@ -26,15 +27,30 @@ class Settings extends Component {
           this.setState({ color: color.hex });
      };
 
+     handleSubmit(e){
+          e.preventDefault();
+
+          this.props.createYoda(this.state);
+          this.setState({
+               name: "",
+               colour: "",
+               submitted: true
+          });
+
+     }
+
      render() {
           return (
-               <Form className="container p-5">
+               <Form 
+                    className="container p-5"
+                    onSubmit={ this.handleSubmit }
+               >
                     <Form.Group className="row justify-content-center mb-5">
                          <Form.Label className="col-12"><p>Name:</p></Form.Label>
                          <Form.Control
                               type="text"
                               className="col-8"
-                              value={ this.state.input } 
+                              value={ this.state.name } 
                               onChange={ this.handleChangeName } 
                          >
                          </Form.Control>

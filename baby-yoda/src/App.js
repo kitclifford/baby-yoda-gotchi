@@ -1,6 +1,6 @@
 import React from "react";
-import Homepage from "./components/Homepage";
-import Game from "./components/Game";
+import Homepage from "./components/Homepage/Homepage";
+import Game from "./components/Game/Game";
 
 import {
      BrowserRouter as Router,

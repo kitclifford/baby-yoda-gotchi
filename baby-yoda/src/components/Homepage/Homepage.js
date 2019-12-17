@@ -1,7 +1,7 @@
 import React from "react";
-import Header from "./Header";
-import Settings from "./Settings";
-import Footer from "./Footer";
+import Header from "../Header/Header";
+import Settings from "../Settings/index";
+import Footer from "../Footer/Footer";
 
 const Homepage = () => (
      <React.Fragment>

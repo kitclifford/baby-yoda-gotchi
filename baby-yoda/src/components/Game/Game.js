@@ -1,7 +1,7 @@
 import React from "react";
 import { ProgressBar } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
-import '../yoda.css';
+import '../../yoda.css';
 
 // EXTEND CLASS AND ADD STATE AND PROPS
 const Game = () => (
