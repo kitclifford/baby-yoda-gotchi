@@ -5,7 +5,8 @@ import { postYoda } from '../../Actions/api';
 const mapStateToProps = state => {
     return {
         name: state.name,
-        color: state.color
+        color: state.color,
+        errors: state.errors
     };
 };
 

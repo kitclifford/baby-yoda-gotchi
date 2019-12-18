@@ -40,6 +40,7 @@ class Settings extends Component {
      }
 
      render() {
+          let { errors } = this.props;
           return (
                <Form 
                     className="container p-5"
@@ -54,6 +55,7 @@ class Settings extends Component {
                               onChange={ this.handleChangeName } 
                          >
                          </Form.Control>
+                         <p>{ errors[errors.length - 1] }</p>
                     </Form.Group>
 
                     <Form.Group className="row justify-content-center mb-5">
@@ -76,7 +78,7 @@ class Settings extends Component {
                     <Button 
                          className="m-1" 
                          variant="outline-warning"
-                    >VIEW YODA HISTORY</Button>
+                    >FIND MY YODA</Button>
                </Form>
           );
      } 

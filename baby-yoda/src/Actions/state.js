@@ -1,7 +1,7 @@
 export const createYoda = (settings) => {
     return {
         type: "createYoda",
-        settings: settings.data
+        settings: settings
     };
 };
 
@@ -19,6 +19,16 @@ export const updateAge = () =>{
         time: Math.floor(Date.now() / 1000) 
     };
 };
+
+export const createError = (data) =>{
+    console.log(data);
+    return {
+        type: "createError",
+        error: data
+    };
+};
+
+
 
 export const updateHealth = () =>{
 
