@@ -32,6 +32,14 @@ const updateHealth = (state) => {
     };
 };
 
+const createError = (state, action) => {
+
+    return {
+        ...state, 
+        errors: [...state.errors, action.error]
+    };
+};
+
 const reducer = (state, action) => {
     switch (action.type){
 
@@ -39,6 +47,7 @@ const reducer = (state, action) => {
          case "feedYoda": return updateHealth(feedYoda(state, action));
          case "updateAge": return updateAge(state, action);
          case "updateHealth": return updateHealth(state, action);
+         case "createError": return createError(state, action);
 
 
          default: return state;

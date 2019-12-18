@@ -8,6 +8,7 @@ const initial = {
     last_fed: 0,
     dob: 0,
     alive: true,
+    errors: []
 }
 
 export default initial;
