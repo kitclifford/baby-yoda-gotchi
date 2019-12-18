@@ -16,6 +16,7 @@ export const feedYoda = (data) => {
 export const updateAge = () =>{
  
     return {
-        type: "updateAge"
+        type: "updateAge",
+        time: Math.floor(Date.now() / 1000) 
     };
 };

@@ -15,11 +15,13 @@ const feedYoda = (state, action) => ({
     last_fed: action.feed_data
 });
 
-const updateAge = (state) => {
-    const age = state.age + 5000
+const updateAge = (state, action) => {
+    // const currentTime = Math.floor(Date.now() / 1000);
+    // const age = currentTime - state.age;
+
     return {
         ...state, 
-        age: age
+        age: action.time - state.dob
     };
 };
 
