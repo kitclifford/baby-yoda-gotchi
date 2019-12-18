@@ -7,7 +7,7 @@ const saveYoda = (state, action) => ({
     submitted: true,
     yoda_id: action.settings.id,
     dob: action.settings.dob,
-    last_fed: Math.floor(Date.now() / 1000)
+    last_fed: Math.floor(Date.now() / 1000),
 });
 
 const feedYoda = (state, action) => ({
@@ -27,7 +27,8 @@ const updateHealth = (state) => {
 
     return {
         ...state, 
-        health: 100 - Math.floor(((Math.floor(Date.now() / 1000)) - state.last_fed) / 30)
+        health: 100 - Math.floor(((Math.floor(Date.now() / 1000)) - state.last_fed) / 1),
+        alive: state.health <= 0 ? false : true,
     };
 };
 

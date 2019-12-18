@@ -6,7 +6,8 @@ const initial = {
     submitted: false,
     yoda_id: 0,
     last_fed: 0,
-    dob: 0
+    dob: 0,
+    alive: true,
 }
 
 export default initial;

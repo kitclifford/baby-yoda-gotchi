@@ -9,6 +9,7 @@ const mapStateToProps = state => {
         color: state.color,
         age: state.age,
         health: state.health,
+        alive: state.alive,
     };
 };
 

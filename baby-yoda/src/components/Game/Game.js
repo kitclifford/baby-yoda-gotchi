@@ -4,14 +4,20 @@ import { Button } from 'react-bootstrap';
 import '../../yoda.css';
 
 class Game extends Component {
-     // constructor(props){
-     //      super(props);
-     // }
+
+     intervalHealth = 0;
+     intervalAge = 0;
 
      componentDidMount(){
-          setInterval(() => (this.props.updateAge()), 1000);
-          setInterval(() => (this.props.updateHealth()), 30000);
+          this.intervalAge = setInterval(() => (this.props.updateAge()), 1000);
+          this.intervalHealth = setInterval(() => (this.props.updateHealth()), 3);
      }
+
+     componentWillUnmount() {
+          clearInterval(this.intervalHealth);
+          clearInterval(this.intervalAge);
+     }
+
 
      render() { 
      let { name, color, age, health, feedClick } = this.props;

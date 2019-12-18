@@ -3,7 +3,8 @@ import App from './App';
 
 const mapStateToProps = state => {
     return {
-       submitted: state.submitted
+       submitted: state.submitted,
+       alive: state.alive,
     };
 };
 
