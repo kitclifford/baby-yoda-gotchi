@@ -5,7 +5,9 @@ const saveYoda = (state, action) => ({
     name: action.settings.name,
     color: action.settings.colour,
     submitted: true,
-    yoda_id: action.settings.id
+    yoda_id: action.settings.id,
+    dob: action.settings.dob,
+    last_fed: Math.floor(Date.now() / 1000)
 });
 
 const feedYoda = (state, action) => ({
