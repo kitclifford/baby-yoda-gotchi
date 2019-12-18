@@ -12,3 +12,10 @@ export const feedYoda = (data) => {
         feed_data: data.data.fed_at
     };
 };
+
+export const updateAge = () =>{
+ 
+    return {
+        type: "updateAge"
+    };
+};

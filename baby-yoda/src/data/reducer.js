@@ -15,11 +15,21 @@ const feedYoda = (state, action) => ({
     last_fed: action.feed_data
 });
 
+const updateAge = (state) => {
+    const age = state.age + 5000
+    return {
+        ...state, 
+        age: age
+    };
+};
+
 const reducer = (state, action) => {
     switch (action.type){
 
          case "createYoda": return saveYoda(state, action);
          case "feedYoda": return feedYoda(state, action);
+         case "updateAge": return updateAge(state, action);
+
          default: return state;
     }
 }

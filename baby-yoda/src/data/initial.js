@@ -1,7 +1,7 @@
 const initial = {
     name: '',
     color: '',
-    age: 10,
+    age: 0,
     health: 100,
     submitted: false,
     yoda_id: 0,
