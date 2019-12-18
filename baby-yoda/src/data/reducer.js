@@ -1,4 +1,4 @@
-import initial from './initial';
+// import initial from './initial';
 
 const saveYoda = (state, action) => ({
     ...state,
@@ -16,12 +16,18 @@ const feedYoda = (state, action) => ({
 });
 
 const updateAge = (state, action) => {
-    // const currentTime = Math.floor(Date.now() / 1000);
-    // const age = currentTime - state.age;
-
+    
     return {
         ...state, 
         age: action.time - state.dob
+    };
+};
+
+const updateHealth = (state) => {
+
+    return {
+        ...state, 
+        health: 100 - Math.floor(((Math.floor(Date.now() / 1000)) - state.last_fed) / 30)
     };
 };
 
@@ -29,8 +35,10 @@ const reducer = (state, action) => {
     switch (action.type){
 
          case "createYoda": return saveYoda(state, action);
-         case "feedYoda": return feedYoda(state, action);
+         case "feedYoda": return updateHealth(feedYoda(state, action));
          case "updateAge": return updateAge(state, action);
+         case "updateHealth": return updateHealth(state, action);
+
 
          default: return state;
     }
