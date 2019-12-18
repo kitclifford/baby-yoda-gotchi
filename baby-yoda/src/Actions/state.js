@@ -1,7 +1,14 @@
 export const createYoda = (settings) => {
-    console.log(settings.data);
     return {
         type: "createYoda",
         settings: settings.data
+    };
+};
+
+export const feedYoda = (data) => {
+    console.log(data.data);
+    return {
+        type: "feedYoda",
+        feed_data: data.data.fed_at
     };
 };

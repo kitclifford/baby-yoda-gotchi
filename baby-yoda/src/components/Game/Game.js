@@ -4,7 +4,7 @@ import { Button } from 'react-bootstrap';
 import '../../yoda.css';
 
 // EXTEND CLASS AND ADD STATE AND PROPS
-const Game = ({ name, color, age, health }) => (
+const Game = ({ name, color, age, health, feedClick }) => (
      <React.Fragment>
           <div className="content">
                <h1>Baby { name }</h1>
@@ -24,7 +24,11 @@ const Game = ({ name, color, age, health }) => (
                <div className="game-controls">
                     <p>Health: </p>
                     <ProgressBar className="m-3" variant="danger" animated now={ health } />
-                    <Button className="m-3" variant="outline-warning">Feed Baby { name }</Button>
+                    <Button 
+                         className="m-3" 
+                         variant="outline-warning"
+                         onClick={ feedClick }
+                    >Feed Baby { name }</Button>
                </div>
                <div className="game-controls">
                     <Button className="m-3" variant="outline-danger">Terminate</Button>

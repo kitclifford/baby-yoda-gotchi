@@ -1,6 +1,8 @@
 import { connect } from 'react-redux';
 import Game from './Game';
 
+import { postFeed } from '../../Actions/api';
+
 const mapStateToProps = state => {
     return {
         name: state.name,
@@ -10,4 +12,10 @@ const mapStateToProps = state => {
     };
 };
 
-export default connect(mapStateToProps, null)(Game);
+const mapDispatchtoProps = dispatch => {
+    return{
+        feedClick: () => dispatch(postFeed())
+    }
+};
+
+export default connect(mapStateToProps, mapDispatchtoProps)(Game);

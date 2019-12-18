@@ -1,16 +1,5 @@
 import axios from '../axios';
-import { createYoda } from './state';
-
-// export const postGame = (settings) => dispatch => {
-//     axios.post('/games', {
-//         player_1: settings.p1Name,
-//         player_2: settings.p2Name,
-//         winning_score: settings.winningScore,
-//         change_serve: settings.alternateEvery
-//     }).then(({ data }) => {
-//         dispatch(setState(data.data));
-//     });
-// };
+import { createYoda, feedYoda } from './state';
 
 export const postYoda = (settings) => dispatch => {
     axios.post('/', {
@@ -18,5 +7,15 @@ export const postYoda = (settings) => dispatch => {
         colour: settings.color
     }).then(({ data }) => {
         dispatch(createYoda(data));
+    });
+}
+
+export const postFeed = () => (dispatch, getState) => {
+
+    const yoda_id = getState().yoda_id;
+
+
+    axios.post(`/${ yoda_id }/feed`).then(({ data }) => {
+        dispatch(feedYoda(data));
     });
 }
