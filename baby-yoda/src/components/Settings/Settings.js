@@ -11,6 +11,8 @@ class Settings extends Component {
           this.state = { 
                name: props.name,
                color: props.color,
+               colorPickError: false,
+               namePickError: false
           };
 
           this.handleChangeName = this.handleChangeName.bind(this);
@@ -30,13 +32,26 @@ class Settings extends Component {
 
      handleSubmit(e){
           e.preventDefault();
-
-          this.props.createYoda(this.state);
+         
+          if (this.state.name !== ""){
+               this.setState({namePickError: false})
+          }
+          if (this.state.color !== ""){
+               this.setState({colorPickError: false})
+          }
+          if (this.state.name === ""){
+               this.setState({namePickError: true})
+          }
+          if (this.state.color === ""){
+               this.setState({colorPickError: true})
+          } else {
+               this.props.createYoda(this.state);
           
-          this.setState({
-               name: "",
-               colour: "",
-          });
+               this.setState({
+                    name: "",
+                    colour: "",
+               });
+          }
      }
 
      handleFindYoda(){
@@ -67,7 +82,11 @@ class Settings extends Component {
                          >
                          </Form.Control>
                          <p>{ errors[errors.length - 1] }</p>
+                         
                     </Form.Group>
+                    <p style={{ display: this.state.namePickError ? "block" : "none"}}>
+                              Please pick a name!
+                    </p>
 
                     <Form.Group className="row justify-content-center mb-5">
                          <Form.Label className="col-12"><p>Colour:</p></Form.Label>
@@ -77,12 +96,15 @@ class Settings extends Component {
                               onChangeComplete={ this.handleChangeColor }
                               />
                     </Form.Group>
+                         <p style={{ display: this.state.colorPickError ? "block" : "none"}}>
+                              Please pick a colour!
+                         </p>
                
                     <Button 
                          type="submit"
                          className="m-1" 
                          variant="outline-warning"
-                    >NEW GAME</Button>
+                    >CREATE YODA</Button>
           
                     <Button 
                          onClick={ this.handleFindYoda }

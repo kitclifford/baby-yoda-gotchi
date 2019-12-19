@@ -19,7 +19,7 @@ class Game extends Component {
 
      componentDidMount(){
           this.intervalAge = setInterval(() => (this.props.updateAge()), 1000);
-          this.intervalHealth = setInterval(() => (this.props.updateHealth()), 3);
+          this.intervalHealth = setInterval(() => (this.props.updateHealth()), 1000);
      }
 
      componentWillUnmount() {
