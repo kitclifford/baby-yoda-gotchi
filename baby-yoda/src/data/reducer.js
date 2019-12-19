@@ -1,4 +1,4 @@
-// import initial from './initial';
+import initial from './initial';
 
 const saveYoda = (state, action) => ({
     ...state,
@@ -8,6 +8,7 @@ const saveYoda = (state, action) => ({
     yoda_id: action.settings.id,
     dob: action.settings.dob,
     last_fed: Math.floor(Date.now() / 1000),
+    health: 100
 });
 
 const feedYoda = (state, action) => ({
@@ -27,7 +28,7 @@ const updateHealth = (state) => {
 
     return {
         ...state, 
-        health: 100 - Math.floor(((Math.floor(Date.now() / 1000)) - state.last_fed) / 1),
+        health: 100 - Math.floor(((Math.floor(Date.now() / 1000)) - state.last_fed) /120),
         alive: state.health <= 0 ? false : true,
     };
 };
@@ -50,6 +51,12 @@ const loadYoda = (state, action) => {
     }
 }
 
+const resetGame = (initial) => {
+    return {
+        ...initial
+    }
+}
+
 const reducer = (state, action) => {
     switch (action.type){
 
@@ -59,6 +66,7 @@ const reducer = (state, action) => {
          case "updateHealth": return updateHealth(state, action);
          case "createError": return createError(state, action);
          case "loadYoda": return loadYoda(state, action);
+         case "resetGame": return resetGame(initial);
 
          default: return state;
     }

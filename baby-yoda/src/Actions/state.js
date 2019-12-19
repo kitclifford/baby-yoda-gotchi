@@ -12,7 +12,7 @@ export const feedYoda = (data) => {
     };
 };
 
-export const updateAge = () =>{
+export const updateAge = () => {
  
     return {
         type: "updateAge",
@@ -20,7 +20,7 @@ export const updateAge = () =>{
     };
 };
 
-export const createError = (data) =>{
+export const createError = (data) => {
     console.log(data);
     return {
         type: "createError",
@@ -28,14 +28,14 @@ export const createError = (data) =>{
     };
 };
 
-export const updateHealth = () =>{
+export const updateHealth = () => {
 
     return {
         type: "updateHealth",
     };
 };
 
-export const loadYoda = (data) =>{
+export const loadYoda = (data) => {
     
     let { id, name, colour } = data[0];
 
@@ -44,5 +44,12 @@ export const loadYoda = (data) =>{
         id: id,
         name: name,
         color: colour
+    };
+};
+
+export const resetGame = () => {
+
+    return {
+        type: "resetGame"
     };
 };
