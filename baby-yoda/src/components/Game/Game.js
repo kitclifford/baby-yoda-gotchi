@@ -33,7 +33,7 @@ class Game extends Component {
      }
 
      render() { 
-     let { name, color, age, health, feedClick } = this.props;
+     let { name, color, age, health } = this.props;
 
      let startAge = age;
 

@@ -36,10 +36,6 @@ export const updateHealth = () => {
 };
 
 export const loadYoda = (data) => {
-    console.log(data.data.dob);
-    console.log(data.data.latest_feed);
-    console.log(Math.floor(Date.now() / 1000))
-    // let { id, name, colour, dob, latest_feed  } = data;
 
     return {
         type: "loadYoda",
