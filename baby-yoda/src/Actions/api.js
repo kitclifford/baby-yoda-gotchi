@@ -1,5 +1,5 @@
 import axios from '../axios';
-import { createYoda, feedYoda, createError, loadYoda } from './state';
+import { createYoda, feedYoda, createError, loadYoda, resetGame } from './state';
 
 export const postYoda = (settings) => dispatch => {
 
@@ -33,4 +33,14 @@ export const getYodaByName = (name) => dispatch => {
             dispatch(loadYoda(data));
         }
     });
+}
+
+export const deleteYoda = () => (dispatch, getState) => {
+
+    const yoda_id = getState().yoda_id;
+
+    axios.delete(`/${ yoda_id }`).then(() => {
+        dispatch(resetGame());
+    });
+
 }

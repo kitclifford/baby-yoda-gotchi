@@ -3,7 +3,6 @@ import { Form } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 import { CirclePicker } from 'react-color';
 
-
 class Settings extends Component {
 
      constructor(props) {
