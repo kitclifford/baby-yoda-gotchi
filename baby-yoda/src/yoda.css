@@ -57,4 +57,56 @@
   border-radius: 50%;
   margin: auto;
   margin-top: -20px;
+  display: flex;
+  position: relative;
+  z-index: -1;
+}
+
+.handOne {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  z-index: 2;
+  animation-name: drink;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+.handTwo {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  position: absolute;
+  top: 40px;
+  left: 10px;
+  z-index: 2;
+  animation-name: drink;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+.cup {
+  height: 50px;
+  width: 40px;
+  border-radius: 25%;
+  position: absolute;
+  top: 40px;
+  left: 30px;
+  background-image: linear-gradient(rgb(49, 31, 19), rgb(136, 136, 136));
+  border-top: lightseagreen 7px solid;
+  z-index: 1;
+  animation-name: drink;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes drink {
+  from {top: 40px;}
+  to {top: 20px;}
 }

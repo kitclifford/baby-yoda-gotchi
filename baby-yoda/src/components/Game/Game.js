@@ -57,7 +57,21 @@ class Game extends Component {
                                         borderTopColor: color,
                                    }}
                               ></div>
-                              <div className="robe"></div>
+                              <div className="robe">
+                                   <div 
+                                   className="handOne"
+                                   style={{
+                                        backgroundColor: color,
+                                   }}
+                                   ></div>
+                                   <div 
+                                   className="handTwo"
+                                   style={{
+                                        backgroundColor: color,
+                                   }}
+                                   ></div>
+                                   <div className="cup"></div>
+                              </div>                         
                          </div>
                          <div className="game-controls">
                               <h3>Age: { displayAge }</h3>
