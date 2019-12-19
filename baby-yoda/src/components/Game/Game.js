@@ -2,8 +2,17 @@ import React, { Component } from "react";
 import { ProgressBar } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 import '../../yoda.css';
+import UIfx from 'uifx';
+import mp3File from './yodaNoise.mp3';
+
+const noise = new UIfx(mp3File);
 
 class Game extends Component {
+
+     constructor(props){
+          super(props);
+          this.handleClick=this.handleClick.bind(this);
+     }
 
      intervalHealth = 0;
      intervalAge = 0;
@@ -18,6 +27,10 @@ class Game extends Component {
           clearInterval(this.intervalAge);
      }
 
+     handleClick() {
+          noise.setVolume(1.0).play();
+          this.props.feedClick();
+     }
 
      render() { 
      let { name, color, age, health, feedClick } = this.props;
@@ -55,7 +68,7 @@ class Game extends Component {
                               <Button 
                                    className="m-3 buttonFeed" 
                                    variant="outline-warning"
-                                   onClick={ feedClick }
+                                   onClick={ this.handleClick }
                               >Feed Baby { name }</Button>
                          </div>
                     </div>
