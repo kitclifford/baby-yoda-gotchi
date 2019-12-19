@@ -16,7 +16,9 @@ class Settings extends Component {
 
           this.handleChangeName = this.handleChangeName.bind(this);
           this.handleChangeColor = this.handleChangeColor.bind(this);
-          this.handleSubmit = this.handleSubmit.bind(this);    
+          this.handleSubmit = this.handleSubmit.bind(this);   
+          this.handleFindYoda = this.handleFindYoda.bind(this);    
+ 
      }
 
      handleChangeName(e) {
@@ -36,7 +38,17 @@ class Settings extends Component {
                name: "",
                colour: "",
           });
+     }
 
+     handleFindYoda(){
+
+          let { findYoda } = this.props;
+          
+          findYoda(this.state.name);
+
+          this.setState({
+               name: "",
+          });
      }
 
      render() {
@@ -73,9 +85,8 @@ class Settings extends Component {
                          variant="outline-warning"
                     >NEW GAME</Button>
           
-                 
-
                     <Button 
+                         onClick={ this.handleFindYoda }
                          className="m-1" 
                          variant="outline-warning"
                     >FIND MY YODA</Button>

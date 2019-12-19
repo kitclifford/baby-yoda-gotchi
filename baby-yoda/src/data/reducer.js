@@ -39,6 +39,16 @@ const createError = (state, action) => {
     };
 };
 
+const loadYoda = (state, action) => {
+    return {
+        ...state,
+        yoda_id: action.id,
+        name: action.name,
+        color: action.color,
+        submitted: true
+    }
+}
+
 const reducer = (state, action) => {
     switch (action.type){
 
@@ -47,7 +57,7 @@ const reducer = (state, action) => {
          case "updateAge": return updateAge(state, action);
          case "updateHealth": return updateHealth(state, action);
          case "createError": return createError(state, action);
-
+         case "loadYoda": return loadYoda(state, action);
 
          default: return state;
     }

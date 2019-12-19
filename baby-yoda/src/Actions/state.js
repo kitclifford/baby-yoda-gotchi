@@ -28,14 +28,21 @@ export const createError = (data) =>{
     };
 };
 
-
-
 export const updateHealth = () =>{
-
-    // let currentTime = Math.floor(Date.now() / 1000);
-    // console.log(currentTime); 
 
     return {
         type: "updateHealth",
+    };
+};
+
+export const loadYoda = (data) =>{
+    
+    let { id, name, colour } = data[0];
+
+    return {
+        type: "loadYoda",
+        id: id,
+        name: name,
+        color: colour
     };
 };

@@ -1,5 +1,5 @@
 import axios from '../axios';
-import { createYoda, feedYoda, createError  } from './state';
+import { createYoda, feedYoda, createError, loadYoda } from './state';
 
 export const postYoda = (settings) => dispatch => {
 
@@ -7,7 +7,6 @@ export const postYoda = (settings) => dispatch => {
         name: settings.name,
         colour: settings.color
     }).then(({ data }) => {
-        console.log(data);
         if(data.error){
             dispatch(createError(data.error));
         }else{
@@ -22,5 +21,16 @@ export const postFeed = () => (dispatch, getState) => {
 
     axios.post(`/${ yoda_id }/feed`).then(({ data }) => {
         dispatch(feedYoda(data));
+    });
+}
+
+export const getYodaByName = (name) => dispatch => {
+
+    axios.get(`/find/${ name }`).then(({ data }) => {
+        if(data.error){
+            dispatch(createError(data.error));
+        } else {
+            dispatch(loadYoda(data));
+        }
     });
 }
