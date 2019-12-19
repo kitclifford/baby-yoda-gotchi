@@ -47,19 +47,16 @@ class Game extends Component {
                               <div className="robe"></div>
                          </div>
                          <div className="game-controls">
-                              <h2>Age: { displayAge }</h2>
+                              <h3>Age: { displayAge }</h3>
                          </div>
                          <div className="game-controls">
                               <p>Health: { health }%</p>
                               <ProgressBar className="m-3" variant="danger" animated now={ health } />
                               <Button 
-                                   className="m-3" 
+                                   className="m-3 buttonFeed" 
                                    variant="outline-warning"
                                    onClick={ feedClick }
                               >Feed Baby { name }</Button>
-                         </div>
-                         <div className="game-controls">
-                              <Button className="m-3" variant="outline-danger">Terminate</Button>
                          </div>
                     </div>
                </React.Fragment>

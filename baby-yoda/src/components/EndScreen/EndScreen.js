@@ -16,7 +16,11 @@ class EndScreen extends Component {
           return (
                <div className="gameOver">
                     <h1 className="text-warning">Your Baby Yoda has gone to a galaxy far far away... in the clouds...</h1>
-                    <Button onClick={ this.handleClick }>Create a new Yoda</Button>
+                    <Button 
+                         onClick={ this.handleClick }
+                         className="mt-5 p-3" 
+                         variant="outline-warning"
+                    >Create a new Yoda</Button>
                </div>
           );
      } 
