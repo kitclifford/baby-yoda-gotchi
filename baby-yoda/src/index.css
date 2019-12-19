@@ -49,11 +49,11 @@ footer p {
 
 .game-controls {
      max-width: 500px;
-     margin: 10px auto;
-     padding: 10px;
-     background: black;
-     border-radius: 30px;
-     border: 1px solid white;
+     margin: 20px auto;
+     padding: 30px;
+     background: linear-gradient(#222027, #000000);
+     border-radius: 20px;
+     border: 2px solid white;
 }
 
 .picker {
@@ -63,4 +63,8 @@ footer p {
 .gameOver {
      margin: 2rem;
      margin-top: 15rem;
+}
+
+.buttonFeed:active {
+     transform: translate(0, 2px);
 }
