@@ -4,13 +4,11 @@ import Settings from "../Settings/index";
 import Footer from "../Footer/Footer";
 
 const Homepage = ( submitted ) => (
-     <React.Fragment>
-          {/* <div style={{ display: submitted ? "block" : "none" }}> */}
-               <Header />
-               <Settings />
-               <Footer />
-          {/* </div> */}
-     </React.Fragment>
+     <>
+          <Header />
+          <Settings />
+          <Footer />
+     </>
 );
 
 export default Homepage;
