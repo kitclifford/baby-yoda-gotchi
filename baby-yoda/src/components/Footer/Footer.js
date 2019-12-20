@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => (
      <footer className="page-footer">
-          <p> App created by Team Can-do-lorians 2019. All rights to the Baby Yoda character held by Disney. Character animation built by Shaw and sourced from Codepen.</p>
+          <p> Created by Team Can-do-lorians 2019. All rights to Star Wars and the 'Baby Yoda' character owned by Disney. Character facial animation based on <a href="https://codepen.io/shshaw/pen/QWwyaNR" className='footer-link'>CSS animation </a>by Shaw.</p>
      </footer>
 );
 
