@@ -15,7 +15,7 @@ class EndScreen extends Component {
      render() {
           return (
                <div className="gameOver">
-                    <h1 className="text-warning">Your Baby Yoda has gone to a galaxy far far away... in the clouds...</h1>
+                    <h1 className="text-warning"> Baby { this.props.name } has gone to a galaxy far, far away....</h1>
                     <Button 
                          onClick={ this.handleClick }
                          className="mt-5 p-3" 

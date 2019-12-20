@@ -52,6 +52,7 @@ const loadYoda = (state, action) => {
             alive: false,
             submitted: true,
             yoda_id: action.id,
+            name: action.name
         };
     } else {
         return {

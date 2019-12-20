@@ -2,10 +2,16 @@ import { connect } from 'react-redux';
 import EndScreen from './EndScreen';
 import { deleteYoda } from '../../Actions/api';
 
-const mapDispatchtoProps = dispatch => {
+const mapStateToProps = state => {
+    return{
+        name: state.name
+    }
+}
+
+const mapDispatchToProps = dispatch => {
     return{
         deleteAndReset: () => dispatch(deleteYoda()),
     }
 };
 
-export default connect(null, mapDispatchtoProps)(EndScreen);
+export default connect(mapStateToProps, mapDispatchToProps)(EndScreen);

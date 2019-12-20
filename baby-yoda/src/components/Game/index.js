@@ -13,13 +13,12 @@ const mapStateToProps = state => {
     };
 };
 
-const mapDispatchtoProps = dispatch => {
+const mapDispatchToProps = dispatch => {
     return{
         feedClick: () => dispatch(postFeed()),
         updateAge: () => dispatch(updateAge()),
         updateHealth: () => dispatch(updateHealth())
-
     }
 };
 
-export default connect(mapStateToProps, mapDispatchtoProps)(Game);
+export default connect(mapStateToProps, mapDispatchToProps)(Game);

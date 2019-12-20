@@ -1,5 +1,5 @@
 body {
-     background-image: url("http://getwallpapers.com/wallpaper/full/a/4/7/16424.jpg");
+     background-image: url("./Media/space_background.jpg");
      text-align: center;
      color: rgb(245, 245, 245);
      font-family: 'Russo One', sans-serif;
@@ -36,7 +36,7 @@ footer p {
 }
 
 .content {
-     margin: 100px;
+     margin: 30px 20px;
 }
 
 .gamebox {
@@ -67,4 +67,14 @@ footer p {
 
 .buttonFeed:active {
      transform: translate(0, 2px);
+}
+
+@media (max-width: 500px){
+     h3 {
+          font-size: 1.5rem;
+     }
+
+     p {
+          font-size: 1.5rem;
+     }
 }
