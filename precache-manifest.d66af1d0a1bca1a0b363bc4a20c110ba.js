@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5bd2ccf48417481628a35268b8a03623",
+    "revision": "5c1397fc6f60e219e1e223531a585b54",
     "url": "/baby-yoda-gotchi/index.html"
   },
   {
-    "revision": "7564ae0515a6c36e5da8",
+    "revision": "0b59265452e6dbd0ae74",
     "url": "/baby-yoda-gotchi/static/css/main.232f5417.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/baby-yoda-gotchi/static/js/2.e279a4d6.chunk.js.LICENSE"
   },
   {
-    "revision": "7564ae0515a6c36e5da8",
-    "url": "/baby-yoda-gotchi/static/js/main.1549c6d4.chunk.js"
+    "revision": "0b59265452e6dbd0ae74",
+    "url": "/baby-yoda-gotchi/static/js/main.3f9e5e70.chunk.js"
   },
   {
     "revision": "7cec26be062bdc2b8f06",

@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/baby-yoda-gotchi/static/css/main.232f5417.chunk.css",
-    "main.js": "/baby-yoda-gotchi/static/js/main.1549c6d4.chunk.js",
-    "main.js.map": "/baby-yoda-gotchi/static/js/main.1549c6d4.chunk.js.map",
+    "main.js": "/baby-yoda-gotchi/static/js/main.3f9e5e70.chunk.js",
+    "main.js.map": "/baby-yoda-gotchi/static/js/main.3f9e5e70.chunk.js.map",
     "runtime-main.js": "/baby-yoda-gotchi/static/js/runtime-main.5fdcfd4e.js",
     "runtime-main.js.map": "/baby-yoda-gotchi/static/js/runtime-main.5fdcfd4e.js.map",
     "static/js/2.e279a4d6.chunk.js": "/baby-yoda-gotchi/static/js/2.e279a4d6.chunk.js",
     "static/js/2.e279a4d6.chunk.js.map": "/baby-yoda-gotchi/static/js/2.e279a4d6.chunk.js.map",
     "index.html": "/baby-yoda-gotchi/index.html",
-    "precache-manifest.602b7955509a3f16ddf3d6387fd26b71.js": "/baby-yoda-gotchi/precache-manifest.602b7955509a3f16ddf3d6387fd26b71.js",
+    "precache-manifest.d66af1d0a1bca1a0b363bc4a20c110ba.js": "/baby-yoda-gotchi/precache-manifest.d66af1d0a1bca1a0b363bc4a20c110ba.js",
     "service-worker.js": "/baby-yoda-gotchi/service-worker.js",
     "static/css/main.232f5417.chunk.css.map": "/baby-yoda-gotchi/static/css/main.232f5417.chunk.css.map",
     "static/js/2.e279a4d6.chunk.js.LICENSE": "/baby-yoda-gotchi/static/js/2.e279a4d6.chunk.js.LICENSE",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.5fdcfd4e.js",
     "static/js/2.e279a4d6.chunk.js",
     "static/css/main.232f5417.chunk.css",
-    "static/js/main.1549c6d4.chunk.js"
+    "static/js/main.3f9e5e70.chunk.js"
   ]
 }

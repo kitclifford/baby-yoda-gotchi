@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/baby-yoda-gotchi/precache-manifest.602b7955509a3f16ddf3d6387fd26b71.js"
+  "/baby-yoda-gotchi/precache-manifest.d66af1d0a1bca1a0b363bc4a20c110ba.js"
 );
 
 self.addEventListener('message', (event) => {
