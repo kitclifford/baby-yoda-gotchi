@@ -3,7 +3,7 @@ import { createYoda, feedYoda, createError, loadYoda, resetGame } from './state'
 
 export const postYoda = (settings) => dispatch => {
 
-    axios.post('/', {
+    axios.post('', {
         name: settings.name,
         colour: settings.color
     }).then(({ data }) => {
