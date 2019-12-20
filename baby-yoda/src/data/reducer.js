@@ -1,6 +1,6 @@
 import initial from './initial';
 
-const secsPerHealthLoss = 30;
+const secsPerHealthLoss = 480;
 
 const saveYoda = (state, action) => ({
     ...state,
