@@ -1,12 +1,12 @@
 import React from "react";
 import Homepage from "../components/Homepage";
 import GameWrapper from "../components/GameWrapper/GameWrapper";
-import EndScreen from "../components/EndScreen";
+import EndScreenWrapper from "../components/EndScreenWrapper/EndScreenWrapper";
 
 const App = ({ submitted, alive } ) => (
 
      <>
-          { submitted ? ( alive ? <GameWrapper/> : <EndScreen/>) : <Homepage/> }
+          { submitted ? ( alive ? <GameWrapper/> : <EndScreenWrapper/>) : <Homepage/> }
      </>
 );
 
